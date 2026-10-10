@@ -1,0 +1,36 @@
+<section class="hero">
+
+    <h1> {{title}} </h1>
+
+    <p> {{description}} </p>
+
+    <button>Explore Districts</button>
+
+</section>
+
+<section class="intro">
+
+    <h2>Explore Odisha</h2>
+
+    <p>
+        Odisha is home to ancient temples, beautiful beaches,
+        wildlife sanctuaries, waterfalls and rich cultural heritage.
+    </p>
+
+</section>
+
+<section class="district-section">
+
+    <h2>Explore Odisha Districts</h2>
+
+    <div class="district-grid">
+
+        @for (district of districts; track district.name) {
+
+        <app-districtcard [district]="district" />
+
+        }
+
+    </div>
+
+</section>

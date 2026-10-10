@@ -1,0 +1,14 @@
+<div class="district-card">
+
+    <img [src]="district().image" [alt]="district().alt" width="200">
+    <h3>{{ district().name }}</h3>
+    <p>
+        {{ district().description }}
+    </p>
+    <p>{{district().rating}} ⭐ </p>
+
+    <button (click)="exploreDistrict()" >
+        Explore
+    </button>
+
+</div>
