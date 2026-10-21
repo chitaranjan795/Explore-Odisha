@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 import { DistrictcardComponent } from '../../Components/districtcard/districtcard.component';
-
+import { CarouselComponent } from '../../Components/carousel/carousel.component';
 @Component({
   selector: 'app-home',
-  imports: [DistrictcardComponent],
+  imports: [DistrictcardComponent, CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -81,5 +81,17 @@ export class HomeComponent {
       alt: 'Something Error',
       rating: 4.4,
     },
+  ];
+
+  category = [
+    'Temple',
+    'Beaches',
+    'Waterfalls',
+    'Wildlife',
+    'Historical Places',
+    'Lakes',
+    'Hill Stations',
+    'Tribal Culture',
+    'Architecture',
   ];
 }

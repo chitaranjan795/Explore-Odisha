@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, input, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-districtcard',
@@ -15,7 +16,10 @@ export class DistrictcardComponent {
     rating: number;
   }>();
 
+  private router = inject(Router);
+
   exploreDistrict() {
-    document.title = this.district().name; // Here the page title is changing on click the explore button
+    const name = this.district().name.toLowerCase().replace(/\s+/g, '-');
+    this.router.navigate(['/districts', name]);
   }
 }

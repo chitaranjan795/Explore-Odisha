@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { DistrictcardComponent } from '../../Components/districtcard/districtcard.component';
+
 @Component({
   selector: 'app-district',
   imports: [],
